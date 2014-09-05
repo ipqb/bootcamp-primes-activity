@@ -1,20 +1,17 @@
 #!/usr/bin/env python2
 
-from math import sqrt
-
 def trial_division(limit):
     # For each number under the limit, try dividing it by every number that it 
-    # could divide evenly into.  So if the number is N, try dividing it by 
-    # everything between 2 and sqrt(N).  We can tell if one number divides 
-    # evenly into another by using the modulo (%) operator, which returns the 
-    # integer remainder after dividing two numbers.
+    # could divide evenly into.  We can tell if one number divides evenly into 
+    # another by using the modulo (%) operator, which returns the integer 
+    # remainder after dividing two numbers.
 
     primes = []
 
     for candidate in range(2, limit + 1):
         candidate_ok = True
 
-        for divisor in range(2, int(sqrt(candidate)) + 1):
+        for divisor in range(2, candidate):
             if candidate % divisor == 0:
                 candidate_ok = False
                 break

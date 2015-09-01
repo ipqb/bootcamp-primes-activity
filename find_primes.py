@@ -25,9 +25,8 @@ def sieve_of_eratosthenes(limit):
     # The sieve array contains a boolean value for every number between 2 and 
     # the given limit.  The boolean value indicates whether or not that number 
     # could be a prime.  At the beginning of the algorithm, every number could 
-    # be a prime (i.e. the array is True everywhere).  As the algorithm 
-    # progresses, more and more numbers will be eliminated.  By the end, only 
-    # primes will remain.
+    # be a prime (i.e. the array is True everywhere).  As the algorithm works 
+    # by eliminating more and more numbers until only the primes remain.
 
     primes = []
     sieve = [True for i in range(limit + 1)]

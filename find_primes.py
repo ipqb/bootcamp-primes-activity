@@ -32,7 +32,7 @@ def sieve_of_eratosthenes(limit):
     primes = []
     sieve = [True for i in range(limit + 1)]
 
-    for candidate in range(2, limit + 1)
+    for candidate in range(2, limit + 1):
         if sieve[candidate]:
             primes.append(candidate)
 
